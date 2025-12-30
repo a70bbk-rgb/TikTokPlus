@@ -78,6 +78,9 @@ jobs:
           path: theos/sdks/
           key: ${{ env.cache-name }}
       
+      - name: Install svn
+        run: brew install svn
+        
       - name: Download iOS 15.5 SDK
         if: steps.SDK.outputs.cache-hit != 'true'
         run: |
