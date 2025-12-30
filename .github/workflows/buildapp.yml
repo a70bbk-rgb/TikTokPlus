@@ -71,7 +71,7 @@ jobs:
       
       - name: Caching
         id: SDK
-        uses: actions/cache@v3.3.1
+        uses: actions/cache@v4
         env:
           cache-name: iOS-15.5-SDK
         with:
@@ -129,7 +129,7 @@ jobs:
           APP_NAME: ${{ inputs.app_name }}
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3.1.1
+        uses: actions/upload-artifact@v4
         env:
           BHTIKTOK_VERSION: ${{ inputs.bhtiktok_version }}
           TIKTOK_VERSION: ${{ inputs.tiktok_version }}
